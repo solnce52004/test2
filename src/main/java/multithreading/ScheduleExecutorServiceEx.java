@@ -7,16 +7,15 @@ import java.util.concurrent.TimeUnit;
 
 public class ScheduleExecutorServiceEx {
     public static void main(String[] args) {
-//        ScheduledExecutorService service = Executors.newScheduledThreadPool(5);
+        ScheduledExecutorService service = Executors.newScheduledThreadPool(5);
 
 //        service.scheduleAtFixedRate(new MyThread(), 4, 2, TimeUnit.SECONDS);
-//        service.scheduleWithFixedDelay(new MyThread(), 4, 5, TimeUnit.SECONDS);
+        service.scheduleWithFixedDelay(new MyThread(), 4, 5, TimeUnit.SECONDS);
 
-        ExecutorService service = Executors.newCachedThreadPool();
-        for (int i = 0; i < 10; i++) {
-            service.execute(new MyThread());
-        }
-
+//        ExecutorService service = Executors.newCachedThreadPool();
+//        for (int i = 0; i < 10; i++) {
+//            service.execute(new MyThread());
+//        }
 
         try {
             Thread.sleep(30_000);
@@ -29,7 +28,7 @@ public class ScheduleExecutorServiceEx {
     }
 }
 
-class MyThread implements Runnable{
+class MyThread implements Runnable {
     @Override
     public void run() {
         System.out.println(Thread.currentThread().getName() + " start");
