@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id "io.freefair.lombok" version "6.0.0-m2" //иначе не будут компилиться
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // import a BOM
+    implementation platform('org.springframework.boot:spring-boot-dependencies:1.5.8.RELEASE')
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    compileOnly group: 'org.projectlombok', name: 'lombok'
+}
+
+test {
+    useJUnitPlatform()
+}
