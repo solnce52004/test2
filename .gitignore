@@ -2,3 +2,11 @@
 .idea
 build
 gradle
+.DS_Store
+src/.DS_Store
+src/main/.DS_Store
+
+#files
+employees.bin
+copy-by-slide-130.jpg
+template.bin

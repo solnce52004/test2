@@ -29,7 +29,9 @@ class CallBox extends Thread {
     @Override
     public void run() {
         try {
+
             this.semaphore.acquire();
+
             System.out.println("Call start... " + this.name);
             Thread.sleep(3000);
             System.out.println("Call end " + this.name);
