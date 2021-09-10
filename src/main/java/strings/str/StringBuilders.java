@@ -16,6 +16,7 @@ public class StringBuilders {
 
         System.out.println(sb3.length());
         System.out.println(sb3.indexOf("B"));
+        System.out.println(sb3.indexOf("S"));
 
         //сравнение на равенство
         System.out.println(sb2 == sb22);//false - разные ссылки на разные объекты
