@@ -14,6 +14,9 @@ public class StringBuilders {
         System.out.println(sb3);// копия
         System.out.println(sb3.capacity());
 
+        System.out.println(sb3.length());
+        System.out.println(sb3.indexOf("B"));
+
         //сравнение на равенство
         System.out.println(sb2 == sb22);//false - разные ссылки на разные объекты
         System.out.println("StringBuilder equals: " + sb2.equals(sb22));//false - метод не переопределен (работает как "=="), как в стринг, сравнеиние по ссылкам

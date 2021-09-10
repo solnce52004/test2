@@ -1,9 +1,8 @@
 package access_modifiers.animals;
 
-public class MainAnimals {
-}
-
 class Animals {
+    final static String ANIMALS = "Animals";
+
     /**
      * метод будет вызван при compile type binding для класса референс-переменной,
      * т.к. указан static - аналогичный метод в дочернем классе объекта (на кот ссылается переменная с типом родителя)
@@ -15,7 +14,7 @@ class Animals {
      * @return String
      */
     static String getName() {
-        return "Animals";
+        return ANIMALS;
     }
 
     void printNameAnimals() {
@@ -24,8 +23,10 @@ class Animals {
 }
 
 class Mouse extends Animals {
+    public static final String MOUSE = "Mouse";
+
     static String getName() {
-        return "Mouse";
+        return MOUSE;
     }
 
     /**
@@ -41,6 +42,7 @@ class Mouse extends Animals {
     public static void main(String[] args) {
         Animals am = new Mouse();
         am.printNameAnimals();
-        Mouse.getName("khkjkhk");
+        String name = Mouse.getName("khkjkhk");
+        System.out.println(name);
     }
 }

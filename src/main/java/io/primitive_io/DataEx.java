@@ -16,7 +16,7 @@ public class DataEx {
             System.out.println(dataInputStream.readByte());
             System.out.println(dataInputStream.readInt());
             System.out.println(dataInputStream.readBoolean());
-            System.out.println(dataInputStream.readLine());
+//            System.out.println(dataInputStream.readLine());
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
